@@ -3,6 +3,7 @@ name = "syfetch"
 version = "0.1.0"
 edition = "2021"
 keywords = ["neofetch"]
+license = "MIT/Apache-2.0"
 categories = ["command-line-utilities"]
 description= "A neofetch like utility written in rust (im still a beginner in rust)"
 homepage= "https://github.com/anandMohanan/syfetch"
