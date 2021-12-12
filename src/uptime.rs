@@ -1,5 +1,6 @@
 use std::fs::read_to_string;
 
+/// Obtain the uptime of the system
 pub fn uptime_info() {
     let up_val = read_to_string("/proc/uptime").unwrap();
     let val: Vec<&str> = up_val.split(".").collect();

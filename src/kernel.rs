@@ -1,5 +1,6 @@
 use std::fs::read_to_string;
 
+/// Obtain the name and version of the KERNEL
 pub fn kernel_info() {
     let distro_name = read_to_string("/proc/sys/kernel/osrelease").unwrap();
 

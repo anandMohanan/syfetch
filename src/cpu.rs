@@ -4,6 +4,7 @@ use std::{
     panic,
 };
 
+/// Obtain the name of the CPU
 pub fn cpu_info() {
     let file = File::open("/proc/cpuinfo").unwrap();
     let f = BufReader::new(file);

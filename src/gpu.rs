@@ -15,7 +15,6 @@ fn r#continue(output_check: String) -> std::io::Result<String> {
     }
 }
 
-/// Obtain the name of the GPU, outputs to a string
 fn gpu_name() -> std::io::Result<String> {
     let output = Command::new("sh")
         .args(&["-c", "lspci | grep -I 'VGA\\|Display\\|3D'"])
@@ -28,6 +27,7 @@ fn gpu_name() -> std::io::Result<String> {
     }
 }
 
+/// Obtain the name of the GPU
 pub fn gpu_info() {
     let gpu_name = match gpu_name() {
         Ok(yes) => yes,

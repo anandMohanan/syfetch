@@ -69,6 +69,7 @@ fn mem_total() -> Result<i64> {
     Err(io::Error::new(std::io::ErrorKind::Other, ERROR_01))
 }
 
+/// Obtain the amount of memory in the system
 pub fn mem_info() {
     let mem_total = match mem_total() {
         Ok(yes) => yes,
