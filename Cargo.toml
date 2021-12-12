@@ -1,0 +1,12 @@
+[package]
+name = "syfetch"
+version = "0.1.0"
+edition = "2021"
+keywords = ["neofetch"]
+categories = ["command-line-utilities"]
+description= "A neofetch like utility written in rust (im still a beginner in rust)"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
