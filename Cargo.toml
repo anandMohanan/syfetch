@@ -5,6 +5,8 @@ edition = "2021"
 keywords = ["neofetch"]
 categories = ["command-line-utilities"]
 description= "A neofetch like utility written in rust (im still a beginner in rust)"
+homepage= "https://github.com/anandMohanan/syfetch"
+repository= "https://github.com/anandMohanan/syfetch"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
