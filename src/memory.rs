@@ -4,6 +4,8 @@ use std::{
     panic,
 };
 
+use colored::Colorize;
+
 fn mem_available() -> Result<i64> {
     let file = File::open("/proc/meminfo").unwrap();
     let f = BufReader::new(file);
@@ -81,5 +83,10 @@ pub fn mem_info() {
         Err(e) => panic!("{}", e),
     };
 
-    println!("| mem: {}mb/{}mb", mem_total - mem_available, mem_total);
+    println!(
+        "{} {}mb/{}mb",
+        "mem:".bright_cyan().bold().italic(),
+        mem_total - mem_available,
+        mem_total
+    );
 }

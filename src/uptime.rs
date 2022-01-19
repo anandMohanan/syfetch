@@ -1,3 +1,4 @@
+use colored::Colorize;
 use std::fs::read_to_string;
 
 /// Obtain the uptime of the system
@@ -24,5 +25,8 @@ pub fn uptime_info() {
         "0m".to_string()
     };
 
-    println!("| uptime: {} {} {}", days, hours, minutes);
+    println!(
+        "{} {days} {hours} {minutes}",
+        "uptime:".bright_cyan().bold().italic()
+    );
 }

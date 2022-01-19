@@ -1,5 +1,7 @@
 use std::process::Command;
 
+use colored::Colorize;
+
 fn r#continue(output_check: String) -> std::io::Result<String> {
     let model = output_check.split(':').collect::<Vec<&str>>()[2]
         .trim()
@@ -35,5 +37,5 @@ pub fn gpu_info() {
             panic!("error: {}", e)
         }
     };
-    println!("| gpu: {}|", gpu_name);
+    println!("{} {gpu_name}", "gpu:".bright_cyan().bold().italic());
 }

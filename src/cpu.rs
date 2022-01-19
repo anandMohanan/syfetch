@@ -4,6 +4,8 @@ use std::{
     panic,
 };
 
+use colored::Colorize;
+
 /// Obtain the name of the CPU
 pub fn cpu_info() {
     let file = File::open("/proc/cpuinfo").unwrap();
@@ -19,10 +21,7 @@ pub fn cpu_info() {
                             .and_then(|(i, _)| name.get(i + 1..))
                             .unwrap_or("");
 
-                        println!(
-                            "| cpu name: {}",
-                            name
-                        );
+                        println!("{} {}", "cpu name:".bright_cyan().bold().italic(), name);
 
                         break;
                     } else {
